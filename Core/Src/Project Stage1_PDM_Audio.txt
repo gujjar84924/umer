@@ -1,0 +1,28 @@
+Project: Stage1_PDM_Audio
+Target: STM32H723ZGTx
+
+Features:
+- Captures audio from 4 PDM microphones via SAI1
+- Converts to PCM using PDM2PCM library
+- Logs Mic1 audio to SD card as log.txt
+- Sample rate: 48kHz, 128 samples per frame
+
+Included:
+- Stage1_PDM_Audio.hex   --> Flash this to your board
+- Stage1_PDM_Audio.ioc   --> (Optional) View project config in STM32CubeMX
+
+Instructions:
+1. Flash firmware to STM32H723ZG board using STM32CubeProgrammer:
+   - Connect the board via USB or ST-Link
+   - Open STM32CubeProgrammer
+   - Click “Connect”
+   - Click “Open File” and select `Stage1_PDM_Audio.hex`
+   - Click “Start Programming”
+
+2. Insert a microSD card (FAT32 formatted) into the board.
+
+3. Reset the board. A file called `log.txt` will be created.
+
+4. Remove the SD card and open `log.txt` to view raw PCM data from Mic1.
+
+Note: Only Mic1 data is saved in this test version.

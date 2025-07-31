@@ -1,0 +1,48 @@
+#include "pdm2pcm.h"
+#include <string.h>
+
+uint32_t PDM_Filter_Init(PDM2PCM_Handler_t *handler)
+{
+    if (!handler)
+        return PDM2PCM_INIT_ERROR;
+
+    // Allocate static memory if not assigned
+    static uint8_t internal_memory[PDM2PCM_MEMORY_SIZE];
+    handler->internal_memory = internal_memory;
+
+    return PDM2PCM_OK;
+}
+
+uint32_t PDM_Filter_setConfig(PDM2PCM_Handler_t *handler, PDM2PCM_Config_t *config)
+{
+    if (!handler || !config)
+        return PDM2PCM_CONFIG_ERROR;
+
+    // Validate decimation factor
+    if (config->decimation_factor != PDM2PCM_DEC_FACTOR_64 &&
+        config->decimation_factor != PDM2PCM_DEC_FACTOR_128)
+    {
+        return PDM2PCM_DECIMATION_ERROR;
+    }
+
+    // Assign config
+    handler->internal_memory = handler->internal_memory;
+    return PDM2PCM_OK;
+}
+
+uint32_t PDM_Filter(void *pdm_data, void *pcm_data, PDM2PCM_Handler_t *handler)
+{
+    if (!pdm_data || !pcm_data || !handler)
+        return PDM2PCM_INIT_ERROR;
+
+    // Dummy mock filter: just copy lower bits for testing/logging
+    uint8_t *in = (uint8_t *)pdm_data;
+    int16_t *out = (int16_t *)pcm_data;
+
+    for (int i = 0; i < 128; ++i)
+    {
+        out[i] = ((int16_t)in[i % 64]) << 4;  // Mock gain
+    }
+
+    return PDM2PCM_OK;
+}

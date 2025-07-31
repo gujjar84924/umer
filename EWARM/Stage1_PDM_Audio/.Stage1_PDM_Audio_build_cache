@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BuildDb>
+    <Tool>
+        <Name>linker</Name>
+        <Parent>
+            <Path>C:\TouchGFXProjects\AC24DEV-MDG-main\Stage1_PDM_Audio\EWARM\Stage1_PDM_Audio\Exe\Stage1_PDM_Audio.out</Path>
+            <Output>
+                <Path>C:\TouchGFXProjects\AC24DEV-MDG-main\Stage1_PDM_Audio\EWARM\Stage1_PDM_Audio\List\Stage1_PDM_Audio.map</Path>
+            </Output>
+        </Parent>
+    </Tool>
+</BuildDb>

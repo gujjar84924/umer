@@ -1,0 +1,21 @@
+C:\iar\ewarm-9.60.3\arm\bin\armPROC.dll
+
+ C:\iar\ewarm-9.60.3\arm\bin\armSIM2.dll
+
+ C:\TouchGFXProjects\AC24DEV-MDG-main\Stage1_PDM_Audio\EWARM\Stage1_PDM_Audio\Exe\Stage1_PDM_Audio.out
+
+ --plugin=C:\iar\ewarm-9.60.3\arm\bin\armLibSupportUniversal.dll
+
+ --device_macro=C:\iar\ewarm-9.60.3\arm/config/debugger/ST/STM32H7xx.dmac
+
+ --device_macro=C:\iar\ewarm-9.60.3\arm/config/debugger/ST/STM32H7xx_M7.dmac
+
+ --device_macro=C:\iar\ewarm-9.60.3\arm/config/debugger/ST/STM32H7xx_DBG.dmac
+
+ --device_macro=C:\iar\ewarm-9.60.3\arm/config/debugger/ST/STM32H7xx_OB.dmac
+
+ --device_macro=C:\iar\ewarm-9.60.3\arm/config/debugger/ST/STM32H7xx_TRACE.dmac
+
+ 
+
+
